@@ -133,8 +133,8 @@ public class ThreadLocalTest {
     }
 
     /**
-     * 延迟回收MyValue的解释: ThreadLocalMap key为弱引用，GC时弱引用key会被回收掉，但是value的值还在，在下一个执行ThreadLocal.get/set时会触发ThreadLocal
-     *清除无效key值的value，然后在下一次GC时就会触发value对象的回收
+     * 延迟回收MyValue的解释: ThreadLocalMap key为弱引用，GC时弱引用key会被回收掉，但是value的值还在，在后续执行ThreadLocal.set时会触发ThreadLocal
+     * 清除无效key值的value，然后在后续GC的时就会触发value对象的回收
      * @throws Exception
      */
     @Test
