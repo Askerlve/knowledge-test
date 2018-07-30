@@ -132,9 +132,14 @@ public class ThreadLocalTest {
         Assert.assertTrue(myThreadLocalFinalized);
     }
 
+    /**
+     * 延迟回收MyValue的解释: ThreadLocalMap key为弱引用，GC时弱引用key会被回收掉，但是value的值还在，在下一个执行ThreadLocal.get/set时会触发ThreadLocal
+     *清除无效key值的value，然后在下一次GC时就会触发value对象的回收
+     * @throws Exception
+     */
     @Test
     public void test6() throws Exception {
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 2; i++) {
             ThreadLocalUser user = new ThreadLocalUser(i);
             MyValue value = new MyValue(i);
             user.setThreadLocal(value);
