@@ -2,7 +2,7 @@ package com.askerlve.knowledge.threadlocal;
 
 /**
  * @author Askerlve
- * @Description: TODO
+ * @Description: StupidInhouseFramework
  * @date 2018/7/27上午9:53
  */
 public abstract class StupidInhouseFramework {

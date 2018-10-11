@@ -2,7 +2,7 @@ package com.askerlve.knowledge.threadlocal;
 
 /**
  * @author Askerlve
- * @Description: TODO
+ * @Description: HappyUser
  * @date 2018/7/27上午9:55
  */
 public class HappyUser extends StupidInhouseFramework {
