@@ -7,7 +7,7 @@ package com.askerlve.knowledge.algotithm;
  */
 public interface IArraySort {
 
-    int[] testArr = {1,45,78,2,54,32,3,546,98};
+    int[] testArr = {45,37,36,90,54,32,3,546,98};
 
     int[] sort(int[] sourceArray) throws Exception;
 
