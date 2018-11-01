@@ -18,7 +18,7 @@ public class QuickSort implements IArraySort {
 
     private int[] quickSort(int[] arr, int left, int right) {
         if (left < right) {
-            int partitionIndex = partition(arr, left, right);
+            int partitionIndex = partition2(arr, left, right);
             quickSort(arr, left, partitionIndex - 1);
             quickSort(arr, partitionIndex + 1, right);
         }
@@ -40,6 +40,24 @@ public class QuickSort implements IArraySort {
         }
         return index - 1;
     }
+
+    private int partition2(int[] arr, int left, int right){
+        int poivt = arr[left];
+        while(left < right) {
+            while (left < right && arr[right] >= poivt) {
+                right--;
+            }
+            arr[left] = arr[right];
+            while (left < right && arr[left] <= poivt) {
+                left++;
+            }
+            arr[right] = arr[left];
+        }
+        arr[left] = poivt;
+        return left;
+    }
+
+
 
     private void swap(int[] arr, int i, int j) {
         int temp = arr[i];
