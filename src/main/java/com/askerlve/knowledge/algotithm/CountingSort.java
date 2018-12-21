@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @author Askerlve
- * @Description: 计数排序
+ * @Description: 计数排序，这个只适合排序数字，如果根据某个对象的某属性则需要额外的操作
  * @date 2018/10/12下午4:21
  */
 public class CountingSort implements IArraySort {
