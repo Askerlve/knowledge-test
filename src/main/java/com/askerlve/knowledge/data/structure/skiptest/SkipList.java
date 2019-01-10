@@ -1,4 +1,4 @@
-package com.askerlve.knowledge.algotithm.jike;
+package com.askerlve.knowledge.data.structure.skiptest;
 
 import java.util.Random;
 
