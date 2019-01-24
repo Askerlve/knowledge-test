@@ -103,6 +103,34 @@ public class BinarySearchTree {
         return p;
     }
 
+    /**
+     * 计算层级的重点于在写出递推公式
+     *
+     * count(level) = max(count(level.left),count(level.right))
+     *
+     * @param tree
+     * @param index
+     * @return
+     */
+    public int getBinaryLevel(Node tree, int index) {
+        if (null == tree) {
+            return index;
+        }
+
+        int maxleftLevel = 0;
+        if (tree.left != null) {
+            maxleftLevel = getBinaryLevel(tree.left, index + 1);
+        }
+
+        int maxRightLevel = 0;
+
+        if (tree.right != null) {
+            maxRightLevel = getBinaryLevel(tree.right, index + 1);
+        }
+
+        return Math.max(maxleftLevel, maxRightLevel) + 1;
+    }
+
 
     public static class Node {
         private int data;
