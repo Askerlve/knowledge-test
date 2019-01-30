@@ -1,4 +1,4 @@
-package com.askerlve.knowledge.data.structure.deepsearch;
+package com.askerlve.knowledge.data.structure.graph;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -67,7 +67,9 @@ public class Graph {
     boolean found = false; // 全局变量或者类成员变量
     public void dfs(int s, int t) {
         found = false;
+        //标记已被访问的顶点
         boolean[] visited = new boolean[v];
+        //搜索路径
         int[] prev = new int[v];
         for (int i = 0; i < v; ++i) {
             prev[i] = -1;
