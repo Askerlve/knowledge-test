@@ -6,6 +6,7 @@ package com.askerlve.knowledge.data.structure.zero_one_package;
  * @date 2019/3/25上午9:12
  */
 public class ZeroPackageValue {
+
     private int maxV = Integer.MIN_VALUE; // 结果放到 maxV 中
     private int[] items = new int[]{2, 2, 4, 6, 3};  // 物品的重量
     private int[] value = {3, 4, 8, 9, 6}; // 物品的价值
@@ -13,6 +14,7 @@ public class ZeroPackageValue {
     private int w = 9; // 背包承受的最大重量
 
     /**
+     * 回溯算法解决
      * @param i  第几个物品
      * @param cw 背包重量
      * @param cv 背包价值
@@ -30,6 +32,9 @@ public class ZeroPackageValue {
 
 }
 
+/**
+ * 动态规划解决
+ */
 class DynamicZeroOnePackage {
 
     /**

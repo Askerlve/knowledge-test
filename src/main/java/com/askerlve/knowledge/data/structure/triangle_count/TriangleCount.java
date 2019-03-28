@@ -37,7 +37,10 @@ public class TriangleCount {
                     // 1,检查当前左节点是否已经设置，如果没有，则直接设置
                     if (status[i][currIndex - 1] == -1) {
                         status[i][currIndex - 1] = leftValue;
-                    } else {
+                    }
+                    //为什么会有这部逻辑？一个节点有可能既是一个节点的左节点，又是一个节点的右节点
+                    else {
+                        //当一个节点即是左节点，又是右节点时，取路径最小的值
                         if (leftValue < status[i][currIndex - 1]) {
                             status[i][currIndex - 1] = leftValue;
                         }
