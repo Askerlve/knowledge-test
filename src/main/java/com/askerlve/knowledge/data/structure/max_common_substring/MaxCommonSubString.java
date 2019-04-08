@@ -2,7 +2,7 @@ package com.askerlve.knowledge.data.structure.max_common_substring;
 
 /**
  * @author Askerlve
- * @Description: 最长公共子串求两个制服穿的相似程度,
+ * @Description: 最长公共子串求两个字符串的相似程度,
  * @date 2019/3/29上午11:21
  */
 public class MaxCommonSubString {
